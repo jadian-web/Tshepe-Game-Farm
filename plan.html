@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan your stay · Tshepe Game Farm</title>
+<meta name="description" content="Plan a stay at Tshepe Game Farm: choose your type of stay, group size, dates and activities, and send the details to Marius on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" type="image/png" href="img/emblem-dark.png">
+</head>
+<body>
+<header class="site-head" id="head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html" aria-label="Tshepe Game Farm home"><img src="img/emblem-dark.png" alt="" width="166" height="215"><span><b>TSHEPE</b><small>Game Farm</small></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="lodge.html">The Lodge</a>
+      <a href="families.html">Families</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="groups.html">Groups</a>
+      <a href="hunting.html">Hunting</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="btn btn-copper" href="plan.html" aria-current="page">Plan your stay</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer"><i></i><span>MENU</span></button>
+  </div>
+  <div class="drawer" id="drawer" hidden><div class="wrap"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html" aria-current="page">Plan your stay</a></div></div>
+</header>
+<main id="top">
+<section class="band dark deep page-plan" aria-labelledby="planH">
+  <div class="wrap plan">
+    <div class="plan-side">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Plan your stay</span></nav>
+      <span class="eyebrow">Plan your stay</span>
+      <h1 id="planH" style="font-size:clamp(2.6rem,5vw,4rem)">Your Tshepe experience <em class="ac">starts here.</em></h1>
+      <p class="lede">Tell us when you would like to visit, how many guests will be staying and what you'd like to experience. We'll turn it into a WhatsApp message for Marius, who handles all bookings.</p>
+      <dl class="contact">
+        <div><dt>Bookings</dt><dd>Marius Struwig</dd></div>
+        <div><dt>WhatsApp</dt><dd class="wa-num"><span>082 610 7583</span><button type="button" class="mini-btn" data-copy="082 610 7583">Copy</button></dd></div>
+        <div><dt>Location</dt><dd>Approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Directions are shared when your booking is confirmed.</dd></div>
+      </dl>
+      <ul class="know">
+        <li><b>Self-catering lodge</b> with a fully equipped kitchen; cook on request</li>
+        <li><b>Firewood and daily cleaning</b> are provided</li>
+        <li><b>Activities and hunting</b> are arranged before arrival</li>
+      </ul>
+    </div>
+    <form class="planner" id="planner" novalidate>
+        <fieldset>
+          <legend><span class="step-tag">01</span>Type of stay</legend>
+          <div class="opts" id="stayOpts">
+            <input type="radio" name="stay" id="st1" value="Family &amp; leisure" checked><label for="st1">Family &amp; leisure</label>
+            <input type="radio" name="stay" id="st2" value="Friends' getaway"><label for="st2">Friends' getaway</label>
+            <input type="radio" name="stay" id="st3" value="Celebration"><label for="st3">Celebration</label>
+            <input type="radio" name="stay" id="st4" value="Team retreat"><label for="st4">Team retreat or meeting</label>
+            <input type="radio" name="stay" id="st5" value="Hunting"><label for="st5">Hunting</label>
+            <input type="radio" name="stay" id="st6" value="Hunting with family"><label for="st6">Hunting + family</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="step-tag">02</span>Overnight guests</legend>
+          <div class="guests">
+            <div class="stepper"><button type="button" id="gMinus" aria-label="Fewer guests">−</button><output id="gOut" aria-live="polite">8</output><button type="button" id="gPlus" aria-label="More guests">+</button></div>
+            <p class="guest-note" id="gNote"></p>
+          </div>
+          <div class="rooms" id="planMap" aria-hidden="true"></div>
+          <label class="check"><input type="checkbox" id="singles"> We'd prefer some single beds (up to eight can be arranged)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="step-tag">03</span>Dates</legend>
+          <div class="fields">
+            <div class="f"><label for="arrive">Arrival</label><input type="date" id="arrive"></div>
+            <div class="f"><label for="depart">Departure</label><input type="date" id="depart"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="step-tag">04</span>Experiences of interest</legend>
+          <div class="opts" id="actOpts">
+            <input type="checkbox" name="act" id="a1" value="Game drives"><label for="a1">Game drives</label>
+            <input type="checkbox" name="act" id="a2" value="Quad biking"><label for="a2">Quad biking</label>
+            <input type="checkbox" name="act" id="a3" value="Fishing"><label for="a3">Fishing</label>
+            <input type="checkbox" name="act" id="a4" value="Walks &amp; mountain biking"><label for="a4">Walks &amp; biking</label>
+            <input type="checkbox" name="act" id="a5" value="Shooting range / clay pigeons"><label for="a5">Shooting</label>
+            <input type="checkbox" name="act" id="a6" value="Sundowners or bush picnic"><label for="a6">Sundowners &amp; picnics</label>
+            <input type="checkbox" name="act" id="a7" value="Family nature experiences"><label for="a7">Kids' nature experiences</label>
+            <input type="checkbox" name="act" id="a8" value="Guided hunting"><label for="a8">Guided hunting</label>
+            <input type="checkbox" name="act" id="a9" value="Cook on request"><label for="a9">Cook on request</label>
+            <input type="checkbox" name="act" id="a10" value="Meeting room"><label for="a10">Meeting room</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="step-tag">05</span>Your details</legend>
+          <div class="fields">
+            <div class="f"><label for="name">Name</label><input type="text" id="name" autocomplete="name"></div>
+            <div class="f"><label for="phone">Contact number</label><input type="tel" id="phone" autocomplete="tel"></div>
+            <div class="f full"><label for="email">Email <i>(optional)</i></label><input type="email" id="email" autocomplete="email"></div>
+            <div class="f full"><label for="msg">Anything else? <i>(optional)</i></label><textarea id="msg" placeholder="Ages of children joining activities, non-hunting guests, meat processing needs, special occasions…"></textarea></div>
+          </div>
+        </fieldset>
+
+        <div class="form-foot">
+          <button class="btn btn-copper arrow" type="submit">Prepare my WhatsApp message</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </div>
+        <div class="result" id="result" hidden>
+          <span class="lab">Your message to Marius</span>
+          <pre id="waText"></pre>
+          <div class="hero-actions">
+            <a class="btn btn-copper" id="waLink" href="https://wa.me/27826107583" target="_blank" rel="noopener">Open in WhatsApp</a>
+            <button class="btn btn-line" type="button" id="copyMsg">Copy message</button>
+          </div>
+          <p class="status">If WhatsApp doesn't open, copy the message and send it to 082 610 7583.</p>
+        </div>
+      </form>
+  </div>
+</section>
+<section class="band light" id="faq" aria-labelledby="faqH">
+  <div class="wrap faq-grid">
+    <div style="display:flex;flex-direction:column;gap:18px"><span class="eyebrow">Good to know</span><h2 id="faqH">Questions <em class="ac">guests ask.</em></h2></div>
+    <div class="faq">
+        <details open><summary>How many guests can Tshepe accommodate?</summary><p>The seven bedrooms accommodate up to 14 guests sharing. An optional open loft can accommodate two additional guests, bringing the maximum to 16 overnight guests.</p></details>
+        <details><summary>Is the lodge self-catering?</summary><p>Yes. Guests have access to a fully equipped communal self-catering kitchen and generous dining and gathering spaces. A cook can be arranged on request.</p></details>
+        <details><summary>Is Tshepe suitable for families with children?</summary><p>Yes. Families with children are welcome. The lodge has shared living spaces and a swimming pool, and suitable nature and outdoor activities can be arranged in advance. Participation is subject to age, supervision and safety requirements.</p></details>
+        <details><summary>What can non-hunting family members do?</summary><p>Guests who are not hunting can enjoy the lodge, pool, boma and clubhouse, and ask about suitable game drives, fishing, nature activities, bush picnics and sundowners by prior arrangement.</p></details>
+        <details><summary>Are activities available during a stay?</summary><p>Guests can enquire about game drives, wildlife viewing, quad biking, walks, mountain biking, fishing, shooting activities, sundowners and bush picnics. All organised activities require advance arrangement.</p></details>
+        <details><summary>Can we plan a team meeting or private gathering?</summary><p>Yes. Tshepe welcomes small team retreats, strategy sessions, family gatherings and private celebrations. Contact us to discuss meeting arrangements and overnight accommodation.</p></details>
+        <details><summary>Does Tshepe offer guided hunting?</summary><p>Yes. PH-guided hunting is available by prior enquiry. Ask about current species availability, rates, permits and equipment requirements.</p></details>
+        <details><summary>Where is Tshepe Game Farm?</summary><p>Approximately 15 km outside Bela-Bela in the Waterberg, Limpopo. Detailed directions are shared when your booking is confirmed.</p></details>
+      </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <img class="logo" src="img/logo-dark.png" alt="Tshepe Game Farm" width="251" height="304" loading="lazy">
+      <div>
+        <h4>Where the Bushveld brings us together.</h4>
+        <p>A private 800-hectare game farm approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Bookings with Marius Struwig on WhatsApp, 082 610 7583.</p>
+      </div>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a></nav>
+    </div>
+    <div class="values">
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 3 5v5c0 4 3 7 7 8 4-1 7-4 7-8V5z"/></svg>Heritage</span>
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18v-7M4 9c0-3 3-5 6-5s6 2 6 5c-2 1-4 2-6 2S6 10 4 9z"/></svg>Nature</span>
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16c0-7 5-12 12-12 0 7-5 12-12 12zM4 16l7-7"/></svg>Respect</span>
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 2.4 5 5.6.6-4.2 3.8 1.2 5.6L10 14.2 5 17l1.2-5.6L2 7.6 7.6 7z"/></svg>Excellence</span>
+    </div>
+    <div class="legal"><span>A place where heritage meets wilderness. Rooted in respect. Driven by excellence.</span><span>© 2026 Tshepe Game Farm</span></div>
+  </div>
+</footer>
+<div class="mbar" id="mbar">
+  <a class="btn btn-line" href="https://wa.me/27826107583" target="_blank" rel="noopener" style="color:var(--cream)">WhatsApp</a>
+  <a class="btn btn-copper" href="plan.html">Plan your stay</a>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
