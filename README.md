@@ -54,13 +54,29 @@ python3 -m http.server 8000
 - **WhatsApp number:** search all files for `27826107583` (international format) and `082 610 7583` (display format).
 - **Brand colours:** these are the CSS variables at the top of `assets/site.css` (`--green`, `--copper`, `--tan`, `--cream` and others).
 
+## Changes in v5 (developer brief, 29 October 2026)
+
+- Fixed room layout: seven named bedrooms (Buffalo king; Springbok, Sable, Zebra, Wildebeest, Kudu, Giraffe queen) and an open loft with two double beds next to Rooms 2 and 3. Single-bed options removed everywhere.
+- Planner: arrival dates before today (South African time) are rejected; a prepared message is cleared as soon as any detail changes; "My dates are flexible" option; inline field errors; enquiry and privacy notices.
+- Experiences: each activity can be added to the enquiry and is carried into the planner (stored only in the visitor's browser). Home activity cards link to their own activity.
+- Copy, captions, connectivity note, underground range and clubhouse wording, hunting offers, Groups and Gallery text updated as specified.
+- Header uses a horizontal lockup built from the supplied logo artwork (`img/logo-horizontal.png`). Replace it with the designer's approved horizontal logo when available.
+- Canonical, Open Graph and JSON-LD metadata, `robots.txt` and `sitemap.xml` use `https://tshepe.netlify.app/`. Find and replace this with the production domain at launch.
+
+## Typography
+
+The CI specifies Trajan Pro and Garet Light. Until licensed web versions are chosen, the site uses free Google Fonts substitutes: Cormorant Garamond (headings, matching the brochure headlines), Jost (body, close to Garet) and Cinzel (reserved for Trajan-style capitals). These substitutes need designer approval.
+
 ## Before launch
 
 These items still need confirming with the farm before going live:
 
 - Rates, deposit, cancellation terms and check-in/out times
 - Official email address, domain and Google Maps pin
-- Higher-resolution bedroom photos (current ones are taken from the brochures)
+- Higher-resolution bedroom photos, each matched to its named room
+- Stock image for the clay pigeon shooting card ("Untitled design.png" was referenced in the brief but not supplied)
+- Marius to confirm: maximum overnight guests, booking route (planner/WhatsApp, NightsBridge or both), booking recipient number, loft bathroom access, meeting-room details, current hunting offers
+- Booking Conditions, Terms and Conditions and privacy notice (to be prepared with Marius)
 - Hunting species, rates and permit requirements (the site directs these to enquiry, as the content master requires)
 
 ## Credits

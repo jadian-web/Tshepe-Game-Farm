@@ -3,8 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Plan your stay · Tshepe Game Farm</title>
-<meta name="description" content="Plan a stay at Tshepe Game Farm: choose your type of stay, group size, dates and activities, and send the details to Marius on WhatsApp.">
+<title>Plan Your Stay | Tshepe Game Farm Enquiries</title>
+<meta name="description" content="Plan your stay at Tshepe Game Farm near Bela-Bela. Enquire about accommodation, availability and experiences for your group.">
+<link rel="canonical" href="https://tshepe.netlify.app/plan.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tshepe Game Farm">
+<meta property="og:title" content="Plan Your Stay | Tshepe Game Farm Enquiries">
+<meta property="og:description" content="Plan your stay at Tshepe Game Farm near Bela-Bela. Enquire about accommodation, availability and experiences for your group.">
+<meta property="og:url" content="https://tshepe.netlify.app/plan.html">
+<meta property="og:image" content="https://tshepe.netlify.app/img/hero-aerial.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2e3b2e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap">
@@ -14,7 +23,7 @@
 <body>
 <header class="site-head" id="head">
   <div class="wrap head-row">
-    <a class="brand" href="index.html" aria-label="Tshepe Game Farm home"><img src="img/emblem-dark.png" alt="" width="166" height="215"><span><b>TSHEPE</b><small>Game Farm</small></span></a>
+    <a class="brand" href="index.html"><img src="img/logo-horizontal.png" alt="Tshepe Game Farm, home" width="535" height="215"></a>
     <nav class="nav" aria-label="Main">
       <a href="lodge.html">The Lodge</a>
       <a href="families.html">Families</a>
@@ -35,9 +44,9 @@
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Plan your stay</span></nav>
       <span class="eyebrow">Plan your stay</span>
       <h1 id="planH" style="font-size:clamp(2.6rem,5vw,4rem)">Your Tshepe experience <em class="ac">starts here.</em></h1>
-      <p class="lede">Tell us when you would like to visit, how many guests will be staying and what you'd like to experience. We'll turn it into a WhatsApp message for Marius, who handles all bookings.</p>
+      <p class="lede">Tell us when you would like to visit, how many guests will be staying and what you'd like to experience. We'll turn it into a WhatsApp message for our bookings contact, who will confirm availability and prepare a quote.</p>
       <dl class="contact">
-        <div><dt>Bookings</dt><dd>Marius Struwig</dd></div>
+        <div><dt>Bookings contact</dt><dd>Marius Struwig</dd></div>
         <div><dt>WhatsApp</dt><dd class="wa-num"><span>082 610 7583</span><button type="button" class="mini-btn" data-copy="082 610 7583">Copy</button></dd></div>
         <div><dt>Location</dt><dd>Approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Directions are shared when your booking is confirmed.</dd></div>
       </dl>
@@ -45,6 +54,7 @@
         <li><b>Self-catering lodge</b> with a fully equipped kitchen; cook on request</li>
         <li><b>Firewood and daily cleaning</b> are provided</li>
         <li><b>Activities and hunting</b> are arranged before arrival</li>
+        <li><b>Connectivity:</b> There is no mobile phone signal across much of the farm. Wi-Fi is available for WhatsApp calls.</li>
       </ul>
     </div>
     <form class="planner" id="planner" novalidate>
@@ -64,17 +74,23 @@
           <legend><span class="step-tag">02</span>Overnight guests</legend>
           <div class="guests">
             <div class="stepper"><button type="button" id="gMinus" aria-label="Fewer guests">−</button><output id="gOut" aria-live="polite">8</output><button type="button" id="gPlus" aria-label="More guests">+</button></div>
-            <p class="guest-note" id="gNote"></p>
+            <p class="guest-note" id="gNote">Up to 16 overnight guests.</p>
           </div>
-          <div class="rooms" id="planMap" aria-hidden="true"></div>
-          <label class="check"><input type="checkbox" id="singles"> We'd prefer some single beds (up to eight can be arranged)</label>
+          <details class="sched-peek"><summary>View the room schedule</summary><ul class="schedule compact" aria-label="Room schedule"><li class="rs"><span class="rs-n">Room 1</span><b>Buffalo</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>King-size bed</span><span class="rs-meta">En-suite bathroom</span></li><li class="rs"><span class="rs-n">Room 2</span><b>Springbok</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">En-suite bathroom</span><span class="rs-tag">Upstairs</span></li><li class="rs"><span class="rs-n">Room 3</span><b>Sable</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">Separate bathroom</span></li><li class="rs"><span class="rs-n">Room 4</span><b>Zebra</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">En-suite, shower only</span><span class="rs-tag">Smaller room</span></li><li class="rs"><span class="rs-n">Room 5</span><b>Wildebeest</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">En-suite bathroom</span><span class="rs-tag">Freestanding unit</span></li><li class="rs"><span class="rs-n">Room 6</span><b>Kudu</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">En-suite bathroom</span><span class="rs-tag">Freestanding unit</span></li><li class="rs"><span class="rs-n">Room 7</span><b>Giraffe</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Queen-size bed</span><span class="rs-meta">En-suite bathroom</span><span class="rs-tag">Freestanding unit</span></li><li class="rs loft"><span class="rs-n">Open loft</span><b>The Loft</b><span class="rs-bed"><svg viewBox="0 0 24 16" aria-hidden="true"><path d="M2 14V3M22 14V8M2 10h20M2 8h20v2M5 8V6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5V8M13 8V6.5A1.5 1.5 0 0 1 14.5 5h3A1.5 1.5 0 0 1 19 6.5V8"/></svg>Two double beds</span><span class="rs-meta">Open area next to Rooms 2 and 3</span></li></ul><p class="guest-note">Bed configurations are fixed as listed. We'll help you plan who sleeps where.</p></details>
         </fieldset>
 
         <fieldset>
           <legend><span class="step-tag">03</span>Dates</legend>
-          <div class="fields">
-            <div class="f"><label for="arrive">Arrival</label><input type="date" id="arrive"></div>
-            <div class="f"><label for="depart">Departure</label><input type="date" id="depart"></div>
+          <div class="opts" role="radiogroup" aria-label="Do you have dates?">
+            <input type="radio" name="datemode" id="dm1" value="fixed" checked><label for="dm1">I have dates</label>
+            <input type="radio" name="datemode" id="dm2" value="flexible"><label for="dm2">My dates are flexible</label>
+          </div>
+          <div class="fields" id="dateFields">
+            <div class="f"><label for="arrive">Arrival</label><input type="date" id="arrive" aria-describedby="arriveErr"><span class="ferr" id="arriveErr"></span></div>
+            <div class="f"><label for="depart">Departure</label><input type="date" id="depart" aria-describedby="departErr"><span class="ferr" id="departErr"></span></div>
+          </div>
+          <div class="fields" id="flexFields" hidden>
+            <div class="f full"><label for="when">Preferred timing <i>(optional)</i></label><input type="text" id="when" placeholder="For example: a weekend in March, or school holidays"></div>
           </div>
         </fieldset>
 
@@ -97,25 +113,27 @@
         <fieldset>
           <legend><span class="step-tag">05</span>Your details</legend>
           <div class="fields">
-            <div class="f"><label for="name">Name</label><input type="text" id="name" autocomplete="name"></div>
-            <div class="f"><label for="phone">Contact number</label><input type="tel" id="phone" autocomplete="tel"></div>
+            <div class="f"><label for="name">Name</label><input type="text" id="name" autocomplete="name" required aria-describedby="nameErr"><span class="ferr" id="nameErr"></span></div>
+            <div class="f"><label for="phone">Contact number</label><input type="tel" id="phone" autocomplete="tel" inputmode="tel" required aria-describedby="phoneErr"><span class="ferr" id="phoneErr"></span></div>
             <div class="f full"><label for="email">Email <i>(optional)</i></label><input type="email" id="email" autocomplete="email"></div>
             <div class="f full"><label for="msg">Anything else? <i>(optional)</i></label><textarea id="msg" placeholder="Ages of children joining activities, non-hunting guests, meat processing needs, special occasions…"></textarea></div>
           </div>
         </fieldset>
 
+        <p class="enq-note">This is an enquiry, not a confirmed booking. Our bookings contact will confirm availability and prepare a quote.</p>
         <div class="form-foot">
           <button class="btn btn-copper arrow" type="submit">Prepare my WhatsApp message</button>
           <p class="status" id="status" role="status" aria-live="polite"></p>
         </div>
         <div class="result" id="result" hidden>
-          <span class="lab">Your message to Marius</span>
+          <span class="lab">Your message to our bookings contact</span>
+          <p class="status">Opening WhatsApp will place the details shown below into a message to our bookings contact. Review the message before sending. <a href="#privacy">Privacy</a></p>
           <pre id="waText"></pre>
           <div class="hero-actions">
             <a class="btn btn-copper" id="waLink" href="https://wa.me/27826107583" target="_blank" rel="noopener">Open in WhatsApp</a>
             <button class="btn btn-line" type="button" id="copyMsg">Copy message</button>
           </div>
-          <p class="status">If WhatsApp doesn't open, copy the message and send it to 082 610 7583.</p>
+          <p class="status">If WhatsApp doesn't open, copy the message and send it to <span class="nowrap">082 610 7583</span>.</p>
         </div>
       </form>
   </div>
@@ -124,15 +142,25 @@
   <div class="wrap faq-grid">
     <div style="display:flex;flex-direction:column;gap:18px"><span class="eyebrow">Good to know</span><h2 id="faqH">Questions <em class="ac">guests ask.</em></h2></div>
     <div class="faq">
-        <details open><summary>How many guests can Tshepe accommodate?</summary><p>The seven bedrooms accommodate up to 14 guests sharing. An optional open loft can accommodate two additional guests, bringing the maximum to 16 overnight guests.</p></details>
+        <details open><summary>How many guests can Tshepe accommodate?</summary><p>The lodge has seven named bedrooms and an open loft. Buffalo has a king-size bed, the other six bedrooms have queen-size beds, and the open loft next to Rooms 2 and 3 has two double beds. The lodge accommodates up to 16 overnight guests. Bed configurations are fixed.</p></details>
         <details><summary>Is the lodge self-catering?</summary><p>Yes. Guests have access to a fully equipped communal self-catering kitchen and generous dining and gathering spaces. A cook can be arranged on request.</p></details>
         <details><summary>Is Tshepe suitable for families with children?</summary><p>Yes. Families with children are welcome. The lodge has shared living spaces and a swimming pool, and suitable nature and outdoor activities can be arranged in advance. Participation is subject to age, supervision and safety requirements.</p></details>
         <details><summary>What can non-hunting family members do?</summary><p>Guests who are not hunting can enjoy the lodge, pool, boma and clubhouse, and ask about suitable game drives, fishing, nature activities, bush picnics and sundowners by prior arrangement.</p></details>
         <details><summary>Are activities available during a stay?</summary><p>Guests can enquire about game drives, wildlife viewing, quad biking, walks, mountain biking, fishing, shooting activities, sundowners and bush picnics. All organised activities require advance arrangement.</p></details>
         <details><summary>Can we plan a team meeting or private gathering?</summary><p>Yes. Tshepe welcomes small team retreats, strategy sessions, family gatherings and private celebrations. Contact us to discuss meeting arrangements and overnight accommodation.</p></details>
-        <details><summary>Does Tshepe offer guided hunting?</summary><p>Yes. PH-guided hunting is available by prior enquiry. Ask about current species availability, rates, permits and equipment requirements.</p></details>
+        <details><summary>Does Tshepe offer guided hunting?</summary><p>Yes. Hunting guided by a Professional Hunter (PH) is available by prior enquiry. Ask about current species availability, rates, permits and equipment requirements.</p></details>
+        <details><summary>Is there mobile signal and Wi-Fi?</summary><p>There is no mobile phone signal across much of the farm. Wi-Fi is available for WhatsApp calls.</p></details>
+        <details><summary>Does an enquiry reserve my dates?</summary><p>No. This is an enquiry, not a confirmed booking. Our bookings contact will confirm availability and prepare a quote. Booking conditions will be published here once approved.</p></details>
         <details><summary>Where is Tshepe Game Farm?</summary><p>Approximately 15 km outside Bela-Bela in the Waterberg, Limpopo. Detailed directions are shared when your booking is confirmed.</p></details>
       </div>
+  </div>
+</section>
+<section class="band light" id="privacy" aria-labelledby="privH" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div style="display:flex;flex-direction:column;gap:18px"><span class="eyebrow">Privacy</span><h2 id="privH" style="font-size:clamp(1.9rem,3.4vw,2.6rem)">How your enquiry details are used.</h2></div>
+    <div class="cols" style="grid-template-columns:1fr">
+      <p class="muted">The planner on this page does not store or send your details. When you choose "Open in WhatsApp", the message shown is placed into WhatsApp on your device, and nothing is sent until you press send. Our bookings contact uses your details only to respond to your enquiry. Tshepe's full privacy notice and booking conditions will be published here once approved.</p>
+    </div>
   </div>
 </section>
 </main>
@@ -142,9 +170,10 @@
       <img class="logo" src="img/logo-dark.png" alt="Tshepe Game Farm" width="251" height="304" loading="lazy">
       <div>
         <h4>Where the Bushveld brings us together.</h4>
-        <p>A private 800-hectare game farm approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Bookings with Marius Struwig on WhatsApp, 082 610 7583.</p>
+        <p>A private 800-hectare game farm approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Bookings: Marius Struwig, WhatsApp <span class="nowrap">082 610 7583</span>.</p>
+        <p class="brandline">Rooted in Hope. Wild by Nature.</p>
       </div>
-      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a></nav>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a><a href="plan.html#faq">Good to know</a><a href="plan.html#privacy">Privacy</a></nav>
     </div>
     <div class="values">
       <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 3 5v5c0 4 3 7 7 8 4-1 7-4 7-8V5z"/></svg>Heritage</span>
