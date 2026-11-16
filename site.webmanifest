@@ -1,0 +1,14 @@
+{
+  "name": "Tshepe Game Farm",
+  "short_name": "Tshepe",
+  "description": "A private 800-hectare game farm near Bela-Bela, with lodge accommodation and bushveld experiences to share.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#1b231c",
+  "theme_color": "#2e3b2e",
+  "icons": [
+    {"src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

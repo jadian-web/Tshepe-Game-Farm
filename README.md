@@ -18,24 +18,29 @@ It is a static site made of plain HTML, CSS and JavaScript. It needs no build st
 | Hunting | `hunting.html` |
 | Gallery | `gallery.html` |
 | Plan your stay (planner + FAQ) | `plan.html` |
+| Privacy policy | `privacy.html` |
+| Terms & conditions | `terms.html` |
+| Page not found | `404.html` |
 
 ```
-assets/site.css   shared styles (Tshepe CI colours and typography)
-assets/site.js    menu, slideshow, tabs, gallery lightbox, stay planner
-img/              farm photography and logo files
+assets/site.css    shared styles (Tshepe CI colours and typography)
+assets/site.js     menu, slideshow, tabs, gallery, cookie consent, stay planner
+assets/fonts/      self-hosted web fonts (SIL Open Font License)
+img/               photos (JPEG + WebP, several sizes), logos, icons
+img/og/            1200x630 social preview images
+netlify.toml       HTTPS, security headers and caching (Netlify)
+sitemap.xml, robots.txt, site.webmanifest, favicon.ico, apple-touch-icon.png
+SECURITY.md        secrets, HTTPS, forms, spam, rate limiting and password guidance
 ```
 
-## Publish with GitHub Pages
+## Publish (Netlify, recommended)
 
-1. Create a new repository on GitHub, for example `tshepe-website`.
-2. Upload the contents of this folder (not the folder itself) to the repository root, then commit.
-3. In the repository, open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then click **Save**.
-5. After a minute or two the site is live at `https://<your-username>.github.io/tshepe-website/`.
+1. Push this folder's contents to the GitHub repository root (not the folder itself).
+2. In Netlify: **Add new site → Import an existing project → GitHub**, choose the repository. Leave the build command empty; the publish directory is the root (`netlify.toml` sets this).
+3. Every push to `main` redeploys the site. `netlify.toml` applies HTTPS, security headers and caching automatically.
+4. To use your own domain, add it under **Domain management**, then search all files for `https://tshepe.netlify.app/` and replace it with the new address (canonical links, social previews, `sitemap.xml`, `robots.txt`), and enable the redirect in `netlify.toml`.
 
-To use your own domain (for example `www.tshepegamefarm.co.za`), add it under **Settings → Pages → Custom domain** and point your DNS to GitHub as GitHub explains on that screen.
-
-`.nojekyll` tells GitHub Pages to serve the files as they are.
+GitHub Pages also works for previewing (`.nojekyll` is included), but it ignores `netlify.toml`, so the security headers will not apply there.
 
 ## Preview locally
 
@@ -63,9 +68,40 @@ python3 -m http.server 8000
 - Header uses a horizontal lockup built from the supplied logo artwork (`img/logo-horizontal.png`). Replace it with the designer's approved horizontal logo when available.
 - Canonical, Open Graph and JSON-LD metadata, `robots.txt` and `sitemap.xml` use `https://tshepe.netlify.app/`. Find and replace this with the production domain at launch.
 
+## Changes in v7 (launch checklist, 16 November 2026)
+
+| Item | Where |
+|---|---|
+| Privacy policy (POPIA) | `privacy.html` |
+| Terms and conditions | `terms.html` |
+| Custom 404 page | `404.html` (Netlify serves it automatically) |
+| Cookie consent banner and "Cookie settings" link | every page; logic in `assets/site.js` |
+| HTTPS, HSTS, CSP and security headers; caching | `netlify.toml` |
+| No secrets in the frontend; password and rate-limit guidance | `SECURITY.md` |
+| Meta titles, descriptions, canonical URLs | every page `<head>` |
+| Social previews (1200×630 Open Graph and Twitter images) | `img/og/` |
+| Favicon set and web app manifest | `favicon.ico`, `apple-touch-icon.png`, `img/icon-*.png`, `site.webmanifest` |
+| Sitemap and robots | `sitemap.xml`, `robots.txt` |
+| WebP images with JPEG fallback; responsive sizes; lazy loading | `img/*.webp`, `<picture>` in every page |
+| Self-hosted fonts (no third-party requests) | `assets/fonts/` |
+| Form validation and spam protection | `plan.html`, `assets/site.js` |
+| One primary call to action | solid copper buttons are reserved for "Plan your stay" |
+
+Checks run before release:
+
+- **Lighthouse (mobile):** Home 93, Lodge 98, Plan 97 for performance, with Accessibility, Best Practices and SEO all at 100. Home was 53 before.
+- **Accessibility:** axe-core found 0 violations (WCAG 2.1 AA plus best practices) at 1366 and 390 px.
+- **Links:** no broken internal links or anchors; every image has alt text.
+- **Layout:** no horizontal scrolling at 360, 390, 768, 1024 or 1366 px.
+- **Planner and consent:** the regression tests pass.
+
+## Hosting note
+
+Deploy on **Netlify**. The security headers, HTTPS rules and caching in `netlify.toml` only take effect there. GitHub Pages ignores `netlify.toml` and cannot set these headers.
+
 ## Typography
 
-The CI specifies Trajan Pro and Garet Light. Until licensed web versions are chosen, the site uses free Google Fonts substitutes: Cormorant Garamond (headings, matching the brochure headlines), Jost (body, close to Garet) and Cinzel (reserved for Trajan-style capitals). These substitutes need designer approval.
+The CI specifies Trajan Pro and Garet Light. Until licensed web versions are chosen, the site uses free Google Fonts substitutes: Cormorant Garamond (headings, matching the brochure headlines) and Jost (body, close to Garet), self-hosted from `assets/fonts/` under the SIL Open Font License. These substitutes need designer approval.
 
 ## Before launch
 
@@ -76,7 +112,7 @@ These items still need confirming with the farm before going live:
 - Higher-resolution bedroom photos, each matched to its named room
 - Stock image for the clay pigeon shooting card ("Untitled design.png" was referenced in the brief but not supplied)
 - Marius to confirm: maximum overnight guests, booking route (planner/WhatsApp, NightsBridge or both), booking recipient number, loft bathroom access, meeting-room details, current hunting offers
-- Booking Conditions, Terms and Conditions and privacy notice (to be prepared with Marius)
+- Management or an attorney to approve `privacy.html` and `terms.html`; confirm and register the Information Officer with the Information Regulator; publish full Booking Conditions
 - Hunting species, rates and permit requirements (the site directs these to enquiry, as the content master requires)
 
 ## Credits

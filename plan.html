@@ -11,19 +11,28 @@
 <meta property="og:title" content="Plan Your Stay | Tshepe Game Farm Enquiries">
 <meta property="og:description" content="Plan your stay at Tshepe Game Farm near Bela-Bela. Enquire about accommodation, availability and experiences for your group.">
 <meta property="og:url" content="https://tshepe.netlify.app/plan.html">
-<meta property="og:image" content="https://tshepe.netlify.app/img/hero-aerial.jpg">
+<meta property="og:image" content="https://tshepe.netlify.app/img/og/og-plan.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The swimming pool at the Tshepe lodge">
+<meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plan Your Stay | Tshepe Game Farm Enquiries">
+<meta name="twitter:description" content="Plan your stay at Tshepe Game Farm near Bela-Bela. Enquire about accommodation, availability and experiences for your group.">
+<meta name="twitter:image" content="https://tshepe.netlify.app/img/og/og-plan.jpg">
 <meta name="theme-color" content="#2e3b2e">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap">
+<link rel="preload" href="assets/fonts/jost-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
-<link rel="icon" type="image/png" href="img/emblem-dark.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 <header class="site-head" id="head">
   <div class="wrap head-row">
-    <a class="brand" href="index.html"><img src="img/logo-horizontal.png" alt="Tshepe Game Farm, home" width="535" height="215"></a>
+    <a class="brand" href="index.html"><img decoding="async" src="img/logo-horizontal.png" alt="Tshepe Game Farm, home" width="535" height="215"></a>
     <nav class="nav" aria-label="Main">
       <a href="lodge.html">The Lodge</a>
       <a href="families.html">Families</a>
@@ -90,7 +99,7 @@
             <div class="f"><label for="depart">Departure</label><input type="date" id="depart" aria-describedby="departErr"><span class="ferr" id="departErr"></span></div>
           </div>
           <div class="fields" id="flexFields" hidden>
-            <div class="f full"><label for="when">Preferred timing <i>(optional)</i></label><input type="text" id="when" placeholder="For example: a weekend in March, or school holidays"></div>
+            <div class="f full"><label for="when">Preferred timing <i>(optional)</i></label><input type="text" id="when" name="when" maxlength="120" placeholder="For example: a weekend in March, or school holidays"></div>
           </div>
         </fieldset>
 
@@ -113,13 +122,14 @@
         <fieldset>
           <legend><span class="step-tag">05</span>Your details</legend>
           <div class="fields">
-            <div class="f"><label for="name">Name</label><input type="text" id="name" autocomplete="name" required aria-describedby="nameErr"><span class="ferr" id="nameErr"></span></div>
-            <div class="f"><label for="phone">Contact number</label><input type="tel" id="phone" autocomplete="tel" inputmode="tel" required aria-describedby="phoneErr"><span class="ferr" id="phoneErr"></span></div>
-            <div class="f full"><label for="email">Email <i>(optional)</i></label><input type="email" id="email" autocomplete="email"></div>
-            <div class="f full"><label for="msg">Anything else? <i>(optional)</i></label><textarea id="msg" placeholder="Ages of children joining activities, non-hunting guests, meat processing needs, special occasions…"></textarea></div>
+            <div class="f"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="nameErr"><span class="ferr" id="nameErr"></span></div>
+            <div class="f"><label for="phone">Contact number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required maxlength="20" aria-describedby="phoneErr"><span class="ferr" id="phoneErr"></span></div>
+            <div class="f full"><label for="email">Email <i>(optional)</i></label><input type="email" id="email" name="email" autocomplete="email" maxlength="120" aria-describedby="emailErr"><span class="ferr" id="emailErr"></span></div>
+            <div class="f full"><label for="msg">Anything else? <i>(optional)</i></label><textarea id="msg" name="msg" maxlength="1000" aria-describedby="msgCount" placeholder="Ages of children joining activities, non-hunting guests, meat processing needs, special occasions…"></textarea><span class="fhint" id="msgCount">Up to 1,000 characters.</span></div>
           </div>
         </fieldset>
 
+        <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
         <p class="enq-note">This is an enquiry, not a confirmed booking. Our bookings contact will confirm availability and prepare a quote.</p>
         <div class="form-foot">
           <button class="btn btn-copper arrow" type="submit">Prepare my WhatsApp message</button>
@@ -127,7 +137,7 @@
         </div>
         <div class="result" id="result" hidden>
           <span class="lab">Your message to our bookings contact</span>
-          <p class="status">Opening WhatsApp will place the details shown below into a message to our bookings contact. Review the message before sending. <a href="#privacy">Privacy</a></p>
+          <p class="status">Opening WhatsApp will place the details shown below into a message to our bookings contact. Review the message before sending. <a href="privacy.html">Privacy policy</a></p>
           <pre id="waText"></pre>
           <div class="hero-actions">
             <a class="btn btn-copper" id="waLink" href="https://wa.me/27826107583" target="_blank" rel="noopener">Open in WhatsApp</a>
@@ -155,25 +165,17 @@
       </div>
   </div>
 </section>
-<section class="band light" id="privacy" aria-labelledby="privH" style="padding-top:0">
-  <div class="wrap faq-grid">
-    <div style="display:flex;flex-direction:column;gap:18px"><span class="eyebrow">Privacy</span><h2 id="privH" style="font-size:clamp(1.9rem,3.4vw,2.6rem)">How your enquiry details are used.</h2></div>
-    <div class="cols" style="grid-template-columns:1fr">
-      <p class="muted">The planner on this page does not store or send your details. When you choose "Open in WhatsApp", the message shown is placed into WhatsApp on your device, and nothing is sent until you press send. Our bookings contact uses your details only to respond to your enquiry. Tshepe's full privacy notice and booking conditions will be published here once approved.</p>
-    </div>
-  </div>
-</section>
 </main>
 <footer>
   <div class="wrap">
     <div class="foot">
       <img class="logo" src="img/logo-dark.png" alt="Tshepe Game Farm" width="251" height="304" loading="lazy">
       <div>
-        <h4>Where the Bushveld brings us together.</h4>
+        <p class="foot-h">Where the Bushveld brings us together.</p>
         <p>A private 800-hectare game farm approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Bookings: Marius Struwig, WhatsApp <span class="nowrap">082 610 7583</span>.</p>
         <p class="brandline">Rooted in Hope. Wild by Nature.</p>
       </div>
-      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a><a href="plan.html#faq">Good to know</a><a href="plan.html#privacy">Privacy</a></nav>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a><a href="plan.html#faq">Good to know</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms &amp; conditions</a><button type="button" class="linklike" data-cookie-settings>Cookie settings</button></nav>
     </div>
     <div class="values">
       <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 3 5v5c0 4 3 7 7 8 4-1 7-4 7-8V5z"/></svg>Heritage</span>
@@ -184,11 +186,21 @@
     <div class="legal"><span>A place where heritage meets wilderness. Rooted in respect. Driven by excellence.</span><span>© 2026 Tshepe Game Farm</span></div>
   </div>
 </footer>
-<div class="mbar" id="mbar">
+<nav class="mbar" id="mbar" aria-label="Quick actions">
   <a class="btn btn-line" href="https://wa.me/27826107583" target="_blank" rel="noopener" style="color:var(--cream)">WhatsApp</a>
   <a class="btn btn-copper" href="plan.html">Plan your stay</a>
-</div>
+</nav>
 
-<script src="assets/site.js"></script>
+<div class="cookie" id="cookie" role="region" aria-labelledby="cookieH" hidden>
+  <div class="cookie-text">
+    <p id="cookieH"><b>Your privacy at Tshepe</b></p>
+    <p>We use essential browser storage to make this site work. With your permission, we'll also remember the activities you add to your enquiry on this device. We don't use advertising or tracking cookies. <a href="privacy.html#cookies">Read our privacy policy</a></p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-line" data-consent="essential">Essential only</button>
+    <button type="button" class="btn btn-line" data-consent="all">Accept</button>
+  </div>
+</div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

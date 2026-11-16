@@ -11,19 +11,29 @@
 <meta property="og:title" content="Lodge and Bushveld Gallery | Tshepe Game Farm">
 <meta property="og:description" content="View photographs of Tshepe's lodge, bedrooms, shared spaces, landscape, wildlife and activities, and start planning your bushveld stay.">
 <meta property="og:url" content="https://tshepe.netlify.app/gallery.html">
-<meta property="og:image" content="https://tshepe.netlify.app/img/hero-dam.jpg">
+<meta property="og:image" content="https://tshepe.netlify.app/img/og/og-gallery.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aerial view of a dam and bushveld at Tshepe Game Farm">
+<meta property="og:locale" content="en_ZA">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lodge and Bushveld Gallery | Tshepe Game Farm">
+<meta name="twitter:description" content="View photographs of Tshepe's lodge, bedrooms, shared spaces, landscape, wildlife and activities, and start planning your bushveld stay.">
+<meta name="twitter:image" content="https://tshepe.netlify.app/img/og/og-gallery.jpg">
 <meta name="theme-color" content="#2e3b2e">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap">
+<link rel="preload" href="assets/fonts/jost-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cormorant-garamond-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" imagesrcset="img/hero-dam-800.webp 800w, img/hero-dam-1200.webp 1200w, img/hero-dam.webp 1600w, img/hero-dam-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="assets/site.css">
-<link rel="icon" type="image/png" href="img/emblem-dark.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 <header class="site-head" id="head">
   <div class="wrap head-row">
-    <a class="brand" href="index.html"><img src="img/logo-horizontal.png" alt="Tshepe Game Farm, home" width="535" height="215"></a>
+    <a class="brand" href="index.html"><img decoding="async" src="img/logo-horizontal.png" alt="Tshepe Game Farm, home" width="535" height="215"></a>
     <nav class="nav" aria-label="Main">
       <a href="lodge.html">The Lodge</a>
       <a href="families.html">Families</a>
@@ -39,7 +49,7 @@
 </header>
 <main id="top">
 <section class="subhero" aria-label="Gallery">
-  <img src="img/hero-dam.jpg" srcset="img/hero-dam-800.jpg 800w, img/hero-dam-1200.jpg 1200w, img/hero-dam.jpg 1600w, img/hero-dam-2400.jpg 2400w" sizes="100vw" alt="Aerial view of a dam and farm roads winding through green bushveld" fetchpriority="high">
+  <picture><source type="image/webp" srcset="img/hero-dam-800.webp 800w, img/hero-dam-1200.webp 1200w, img/hero-dam.webp 1600w, img/hero-dam-2400.webp 2400w" sizes="100vw"><img width="1600" height="901" src="img/hero-dam.jpg" srcset="img/hero-dam-800.jpg 800w, img/hero-dam-1200.jpg 1200w, img/hero-dam.jpg 1600w, img/hero-dam-2400.jpg 2400w" sizes="100vw" alt="Aerial view of a dam and farm roads winding through green bushveld" fetchpriority="high"></picture>
   <div class="wrap">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Gallery</span></nav>
@@ -56,9 +66,9 @@
   </div>
 </section>
 <section class="cta-band" aria-label="Plan your stay">
-  <img src="img/hero-river.jpg" srcset="img/hero-river-800.jpg 800w, img/hero-river-1200.jpg 1200w, img/hero-river.jpg 1600w, img/hero-river-2400.jpg 2400w" sizes="100vw" alt="" loading="lazy">
+  <picture><source type="image/webp" srcset="img/hero-river-800.webp 800w, img/hero-river-1200.webp 1200w, img/hero-river.webp 1600w, img/hero-river-2400.webp 2400w" sizes="100vw"><img decoding="async" width="1600" height="901" src="img/hero-river.jpg" srcset="img/hero-river-800.jpg 800w, img/hero-river-1200.jpg 1200w, img/hero-river.jpg 1600w, img/hero-river-2400.jpg 2400w" sizes="100vw" alt="" loading="lazy"></picture>
   <div class="wrap">
-    <img src="img/emblem-dark.png" alt="" width="60" style="width:60px">
+    <img decoding="async" src="img/emblem-dark.png" alt="" width="60" style="width:60px">
     <h2>Picture your next stay <em class="ac">at Tshepe.</em></h2>
     <p>Tell us your dates, your group and what you have in mind. Our bookings contact will help you plan the rest.</p>
     <div class="hero-actions">
@@ -73,11 +83,11 @@
     <div class="foot">
       <img class="logo" src="img/logo-dark.png" alt="Tshepe Game Farm" width="251" height="304" loading="lazy">
       <div>
-        <h4>Where the Bushveld brings us together.</h4>
+        <p class="foot-h">Where the Bushveld brings us together.</p>
         <p>A private 800-hectare game farm approximately 15 km outside Bela-Bela, Waterberg, Limpopo. Bookings: Marius Struwig, WhatsApp <span class="nowrap">082 610 7583</span>.</p>
         <p class="brandline">Rooted in Hope. Wild by Nature.</p>
       </div>
-      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a><a href="plan.html#faq">Good to know</a><a href="plan.html#privacy">Privacy</a></nav>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="lodge.html">The Lodge</a><a href="families.html">Families &amp; Leisure</a><a href="experiences.html">Experiences</a><a href="groups.html">Groups &amp; Meetings</a><a href="hunting.html">Hunting</a><a href="gallery.html">Gallery</a><a href="plan.html">Plan your stay</a><a href="plan.html#faq">Good to know</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms &amp; conditions</a><button type="button" class="linklike" data-cookie-settings>Cookie settings</button></nav>
     </div>
     <div class="values">
       <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2 3 5v5c0 4 3 7 7 8 4-1 7-4 7-8V5z"/></svg>Heritage</span>
@@ -88,15 +98,25 @@
     <div class="legal"><span>A place where heritage meets wilderness. Rooted in respect. Driven by excellence.</span><span>© 2026 Tshepe Game Farm</span></div>
   </div>
 </footer>
-<div class="mbar" id="mbar">
+<nav class="mbar" id="mbar" aria-label="Quick actions">
   <a class="btn btn-line" href="https://wa.me/27826107583" target="_blank" rel="noopener" style="color:var(--cream)">WhatsApp</a>
   <a class="btn btn-copper" href="plan.html">Plan your stay</a>
-</div>
+</nav>
 <div class="lightbox" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
   <div class="lb-top"><span id="lbCap"></span><button class="lb-btn" id="lbClose" aria-label="Close">✕</button></div>
   <div class="lb-stage"><img id="lbImg" alt=""></div>
   <div class="lb-nav"><button class="lb-btn" id="lbPrev" aria-label="Previous photo">←</button><button class="lb-btn" id="lbNext" aria-label="Next photo">→</button></div>
 </div>
-<script src="assets/site.js"></script>
+<div class="cookie" id="cookie" role="region" aria-labelledby="cookieH" hidden>
+  <div class="cookie-text">
+    <p id="cookieH"><b>Your privacy at Tshepe</b></p>
+    <p>We use essential browser storage to make this site work. With your permission, we'll also remember the activities you add to your enquiry on this device. We don't use advertising or tracking cookies. <a href="privacy.html#cookies">Read our privacy policy</a></p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-line" data-consent="essential">Essential only</button>
+    <button type="button" class="btn btn-line" data-consent="all">Accept</button>
+  </div>
+</div>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
