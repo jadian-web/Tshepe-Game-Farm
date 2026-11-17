@@ -38,7 +38,7 @@ SECURITY.md        secrets, HTTPS, forms, spam, rate limiting and password guida
 1. Push this folder's contents to the GitHub repository root (not the folder itself).
 2. In Netlify: **Add new site → Import an existing project → GitHub**, choose the repository. Leave the build command empty; the publish directory is the root (`netlify.toml` sets this).
 3. Every push to `main` redeploys the site. `netlify.toml` applies HTTPS, security headers and caching automatically.
-4. To use your own domain, add it under **Domain management**, then search all files for `https://tshepe.netlify.app/` and replace it with the new address (canonical links, social previews, `sitemap.xml`, `robots.txt`), and enable the redirect in `netlify.toml`.
+4. Live domain: **https://www.tshepegamefarm.co.za** (primary). DNS stays in cPanel (Zone Editor): `tshepegamefarm.co.za` A record → `75.2.60.5`, `www` CNAME → `tshepegamefarm.netlify.app`. Email records (MX `mx1.tld-mx.com`, `mail`, `webmail`, SPF) are unchanged. `netlify.toml` redirects the bare domain and the netlify.app address to www.
 
 GitHub Pages also works for previewing (`.nojekyll` is included), but it ignores `netlify.toml`, so the security headers will not apply there.
 
@@ -66,7 +66,7 @@ python3 -m http.server 8000
 - Experiences: each activity can be added to the enquiry and is carried into the planner (stored only in the visitor's browser). Home activity cards link to their own activity.
 - Copy, captions, connectivity note, underground range and clubhouse wording, hunting offers, Groups and Gallery text updated as specified.
 - Header uses a horizontal lockup built from the supplied logo artwork (`img/logo-horizontal.png`). Replace it with the designer's approved horizontal logo when available.
-- Canonical, Open Graph and JSON-LD metadata, `robots.txt` and `sitemap.xml` use `https://tshepe.netlify.app/`. Find and replace this with the production domain at launch.
+- Canonical, Open Graph and JSON-LD metadata, `robots.txt` and `sitemap.xml` use `https://www.tshepegamefarm.co.za/`. Find and replace this with the production domain at launch.
 
 ## Changes in v7 (launch checklist, 16 November 2026)
 

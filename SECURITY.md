@@ -11,7 +11,7 @@ The Tshepe website is a static site: plain HTML, CSS and JavaScript served by Ne
 ## HTTPS
 
 - Netlify issues a free TLS certificate and redirects `http://` to `https://` automatically for the `netlify.app` address and any custom domain.
-- `netlify.toml` sends `Strict-Transport-Security` (HSTS, two years, including subdomains). The Content Security Policy includes `upgrade-insecure-requests`.
+- `netlify.toml` sends `Strict-Transport-Security` (HSTS, two years; subdomains are not included so cPanel webmail on mail.tshepegamefarm.co.za is unaffected). The Content Security Policy includes `upgrade-insecure-requests`.
 - When the production domain is live, enable the commented redirect in `netlify.toml` so the `netlify.app` address forwards to it.
 
 ## Security headers (`netlify.toml`)

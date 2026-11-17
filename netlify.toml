@@ -6,14 +6,20 @@
 # HTTPS
 # Netlify serves every site over HTTPS and redirects http:// to https://
 # automatically once the certificate is issued (Domain management > HTTPS).
-# When the production domain is connected, uncomment the rule below so the
-# netlify.app address permanently redirects to it (replace the domain first).
 # ---------------------------------------------------------------------------
-# [[redirects]]
-#   from = "https://tshepe.netlify.app/*"
-#   to = "https://www.example.co.za/:splat"
-#   status = 301
-#   force = true
+# Send the old Netlify address and the bare domain to the primary domain.
+# (Netlify also does this automatically once www is set as the primary domain.)
+[[redirects]]
+  from = "https://tshepegamefarm.netlify.app/*"
+  to = "https://www.tshepegamefarm.co.za/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://tshepegamefarm.co.za/*"
+  to = "https://www.tshepegamefarm.co.za/:splat"
+  status = 301
+  force = true
 
 # ---------------------------------------------------------------------------
 # Security headers for every response
@@ -21,7 +27,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains"
+    Strict-Transport-Security = "max-age=63072000"
     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://tshepe.netlify.app/sitemap.xml
+Sitemap: https://www.tshepegamefarm.co.za/sitemap.xml
